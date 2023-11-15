@@ -34,5 +34,7 @@ export async function jutsu(folder: string) {
   // 复制文件
   fs.copySync(`${currentPath}/${config.inputDir}`, `${currentPath}/${config.outputDir}/${folder}`)
 
+  config.complete && config.complete()
+
   console.log(blue('👥 Jutsu is done ✨\n'))
 }
