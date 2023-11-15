@@ -1,7 +1,7 @@
 export interface JutsuConfig {
   inputDir: string
   outputDir: string
-  complete?: () => void
+  complete?: (name: string) => void
 }
 
 export function defineConfig(config: JutsuConfig) {

@@ -1,7 +1,7 @@
 {
   "name": "@kovsu/jutsu",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.1.1",
   "description": "🟥 Cooopy jutsu.",
   "author": "Konv Suu",
   "main": "dist/index.js",
@@ -14,6 +14,7 @@
   ],
   "scripts": {
     "build": "tsup",
+    "prepublishOnly": "nr build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },

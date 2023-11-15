@@ -9,5 +9,5 @@ export default antfu({
 
   rules: {
     'no-console': 'off',
-  }
+  },
 })

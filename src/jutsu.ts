@@ -21,7 +21,7 @@ export async function jutsu(folder: string) {
   if (fileExist(`${currentPath}/${config.outputDir}/${folder}`)) {
     const isRemove = await confirm({ message: '🗑️ Remove exist folder?' })
     if (isRemove) {
-      fs.removeSync(`${currentPath}/${config.outputDir}`)
+      fs.removeSync(`${currentPath}/${config.outputDir}/${folder}`)
     }
     else {
       console.log(red('👮 Jutsu is stopped ✨\n'))
@@ -34,7 +34,7 @@ export async function jutsu(folder: string) {
   // 复制文件
   fs.copySync(`${currentPath}/${config.inputDir}`, `${currentPath}/${config.outputDir}/${folder}`)
 
-  config.complete && config.complete()
+  config.complete && config.complete(folder)
 
   console.log(blue('👥 Jutsu is done ✨\n'))
 }
